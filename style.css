@@ -121,3 +121,36 @@ padding: 0;
   margin-left: 1.2rem;
   list-style-type: none;
 }
+
+/* perfil */
+.perfil{
+  display: flex;
+  width: 50rem;
+  margin-left: 8rem;
+  margin-top: 1rem;
+}
+.logo_usuario{
+
+  height: 4rem;
+  width: 4rem;
+}
+
+.parrafos_perfil{
+  margin-left: 0.5rem;
+}
+.saludo{
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0.7rem;
+}
+
+.intereses{
+  padding-top: 0.6rem;
+}
+
+.logo_usuario img{
+  display: flex;
+  height: 3rem;
+  width: 3rem;
+  margin: 0.6rem auto;
+}
