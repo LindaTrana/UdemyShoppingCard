@@ -1,34 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans&display=swap');
+
 *{
 box-sizing: border-box;
 margin: 0;
 padding: 0;
 }
 
-/* img{
-  height: 2rem;
-  width: 2rem;
-} */
+body{
+  font-family: "Ancizar Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .busqueda{
   display: flex;
-  
+  padding: 0.5rem;
 }
+
 .logo{
   margin-left: 1.3rem;
   display: flex;
   margin:0.5rem
 }
 .logo img{
-  width: 3rem;
-  height: 4rem;
-  margin-left: 1rem;
+  width: 6rem;
+  margin-left: .9rem;
 }
 
 .logo a{
   text-decoration: none;
   align-self: center;
-  margin: 0 1rem 0 1rem;
-  font-size: 0.9rem;
+  margin: 0 0.4rem 0 1rem;
+  font-size: 1rem;
   color:rgb(37, 37, 37)
 }
 
@@ -38,10 +42,11 @@ padding: 0;
   background-color: #fff;
   align-self: center;
   align-items: center;
-  border: 1px solid #5f5d5d;
+  border: 1px solid #a1a1a1;
   border-radius: 3rem;
-  height: 2.5rem;
-  width: 44rem;
+  height: 3rem;
+  width: 34rem;
+  padding: 0.5rem;
  
 }
 
@@ -53,33 +58,33 @@ padding: 0;
 }
 
 .contenedor_busqueda img{
-  height: .7rem;
-  width: .7rem;
+  height: .9rem;
+  width: .8rem;
   margin-left: .5rem;
   margin-right: .5rem;
- 
 }
 
 /*opciones -------------*/
 .opciones{
   color: rgb(37, 37, 37);
-  font-size: .8rem;
-  margin-left: .8rem;
+  font-size: 1rem;
+  margin-left: 1rem;
   align-self: center;
 }
 .opciones ul{
   display: flex;
   list-style-type: none;
+  padding: 0.6rem;
 }
 
 .opciones li{
-  margin: 0.3rem
+  margin: 0.3rem;
+   padding: 0.3rem;
 }
 
 /*iconos ---------------*/
 
 .iconos_udemy{
-  margin-left: 0.8rem;
   align-self: center;
 }
 .iconos_udemy ul{
@@ -88,8 +93,8 @@ padding: 0;
 }
 
 .iconos_udemy img{
-  height: .9rem;
-  width: .9rem;
+  height: 1rem;
+  width: 1rem;
 }
 
 .iconos_udemy li{
@@ -108,13 +113,13 @@ padding: 0;
 
 .lista{
   padding: .7rem;
-  width: 75%;
+  width: 90%;
   margin: 0 auto;
 }
 
 .lista ul {
   display: flex;
-  font-size: .8rem;
+  font-size: 1rem;
 }
 
 .lista ul li{
@@ -153,4 +158,68 @@ padding: 0;
   height: 3rem;
   width: 3rem;
   margin: 0.6rem auto;
+}
+
+/* SLIDER */
+
+.slider {
+  position: relative;
+  width: 80%;
+  margin: 1.6rem auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  width: 100%; 
+}
+
+.slides img {
+  width: 100%;
+  display: block;
+}
+
+.buttons {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.buttons button {
+  background-color: rgba(252, 246, 246, 0.966);
+  color: rgb(41, 37, 37);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.1rem;
+}
+
+button{
+  width: 1.8rem;
+}
+
+.buttons button:hover {
+  background-color: rgba(204, 202, 202, 0.8);
+}
+
+.btn1{
+  margin-left: 1rem;
+}
+.btn2{
+  margin-right: 1rem;
+}
+
+.videos{
+  width: 100vh;
+
+}
+
+.videos img{
+  width: 5rem;
+  height: 5rem;
 }
