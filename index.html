@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style/style.css">
   <title>Udemy</title>
 </head>
 <body>
                <!-- HEADER  -->
-  <header>
+  <header id="headerIndex">
                  <!--- MENU -->
     <section class="busqueda">
         <div class="logo">
@@ -34,18 +34,9 @@
               <img src="./images/shopping-carts.png" alt="" >
               <div id="carrito" class="carrito">
                   <table id="lista-carrito" class="u-full-width">
-                      <thead>
-                          <tr>
-                              <th>Imagen</th>
-                              <th>Nombre</th>
-                              <th>Precio</th>
-                              <th>Cantidad</th>
-                          </tr>
-                      </thead>
                       <tbody></tbody>
                   </table>
-                  <a href="#" id="vaciar-carrito" class="button u-full-width">Ir a la cesta</a>
-                  <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                  <a href="cesta.html"><button  class="button u-full-width"> Ir a la cesta</button></a>
               </div>
             </li>
             <li><img src="./images/bell.png" alt=""></li>
@@ -109,7 +100,7 @@
                     <h4>Java para Principiantes</h4>
                     <p>Juan Pedro</p>
                     <img src="./images/cursos/estrellas.png">
-                    <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                    <p class="precio"><span class="u-pull-right ">$15</span></p>
                     <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar Al Carrito</a>
                   </div>
                 </div> <!--.card-->
@@ -121,7 +112,7 @@
                   <h4>Spring Boot desde cero</h4>
                   <p>Juan Pedro</p>
                   <img src="./images/cursos/estrellas.png">
-                  <p class="precio"> $200 <span class="u-pull-right ">$15</span></p>
+                  <p class="precio"> <span class="u-pull-right ">$15</span></p>
                   <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar Al Carrito</a>
                 </div>
             </div>
@@ -133,7 +124,7 @@
                         <h4>Desarrollo de software desde cero</h4>
                         <p>Juan Pedro</p>
                         <img src="./images/cursos/estrellas.png">
-                        <p class="precio"> $200 <span class="u-pull-right ">$15</span></p>
+                        <p class="precio"><span class="u-pull-right ">$15</span></p>
                         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="3">Agregar Al Carrito</a>
                     </div>
                 </div> <!--.card-->
@@ -145,7 +136,7 @@
                         <h4>Guitarra para Principiantes</h4>
                         <p>Juan Pedro</p>
                         <img src="./images/cursos/estrellas.png">
-                        <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                        <p class="precio"> <span class="u-pull-right ">$15</span></p>
                         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="4">Agregar Al Carrito</a>
                     </div>
                 </div> <!--.card-->
@@ -163,7 +154,7 @@
                       <h4>React desde cero</h4>
                       <p>Juan Pedro</p>
                       <img src="./images/cursos/estrellas.png">
-                      <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                      <p class="precio"><span class="u-pull-right ">$15</span></p>
                       <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="5">Agregar Al Carrito</a>
                   </div>
               </div> <!--.card-->
@@ -175,7 +166,7 @@
                       <h4>HTML & CSS desde cero</h4>
                       <p>Juan Pedro</p>
                       <img src="./images/cursos/estrellas.png">
-                      <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                      <p class="precio"><span class="u-pull-right ">$15</span></p>
                       <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="6">Agregar Al Carrito</a>
                   </div>
               </div> <!--.card-->
@@ -187,7 +178,7 @@
                       <h4>Desarrollo de software</h4>
                       <p>Juan Pedro</p>
                       <img src="./images/cursos/estrellas.png">
-                      <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                      <p class="precio"><span class="u-pull-right ">$15</span></p>
                       <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="7">Agregar Al Carrito</a>
                   </div>
               </div> <!--.card-->
@@ -199,7 +190,7 @@
                     <h4>Diseño Web para Principiantes</h4>
                     <p>Juan Pedro</p>
                     <img src="./images/cursos/estrellas.png">
-                    <p class="precio"> $200 <span class="u-pull-right ">$15</span></p>
+                    <p class="precio"><span class="u-pull-right ">$15</span></p>
                     <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="8">Agregar Al Carrito</a>
                 </div>
               </div> <!--.card-->
@@ -217,7 +208,7 @@
                       <h4>Comida Mexicana para principiantes</h4>
                       <p>Juan Pedro</p>
                       <img src="./images/cursos/estrellas.png">
-                      <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                      <p class="precio"><span class="u-pull-right ">$15</span></p>
                       <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="9">Agregar Al Carrito</a>
                   </div>
               </div> <!--.card-->
@@ -229,7 +220,7 @@
                       <h4>Huerto en casa</h4>
                       <p>Juan Pedro</p>
                       <img src="./images/cursos/estrellas.png">
-                      <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                      <p class="precio"><span class="u-pull-right ">$15</span></p>
                       <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="10">Agregar Al Carrito</a>
                   </div>
               </div> <!--.card-->
@@ -241,7 +232,7 @@
                     <h4>Cosecha tus propias frutas y verduras</h4>
                     <p>Juan Pedro</p>
                     <img src="./images/cursos/estrellas.png">
-                    <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                    <p class="precio"><span class="u-pull-right ">$15</span></p>
                     <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="11">Agregar Al Carrito</a>
                 </div>
               </div> <!--.card-->
@@ -254,7 +245,7 @@
                     <h4>Cosecha tus propias frutas y verduras</h4>
                     <p>Juan Pedro</p>
                     <img src="./images/cursos/estrellas.png">
-                    <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                    <p class="precio"><span class="u-pull-right ">$15</span></p>
                     <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="12">Agregar Al Carrito</a>
                 </div>
               </div> <!--.card-->
@@ -272,7 +263,7 @@
                     <h4>HTML & CSS desde cero</h4>
                     <p>Juan Pedro</p>
                     <img src="./images/cursos/estrellas.png">
-                    <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                    <p class="precio"><span class="u-pull-right ">$15</span></p>
                     <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="13">Agregar Al Carrito</a>
                 </div>
               </div> <!--.card-->
@@ -284,7 +275,7 @@
                     <h4>JavaScript Moderno con ES6</h4>
                     <p>Juan Pedro</p>
                     <img src="./images/cursos/estrellas.png">
-                    <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                    <p class="precio"><span class="u-pull-right ">$15</span></p>
                     <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="14">Agregar Al Carrito</a>
                 </div>
               </div> <!--.card-->
@@ -296,7 +287,7 @@
                       <h4>100 Recetas de Comida Natural</h4>
                       <p>Juan Pedro</p>
                       <img src="./images/cursos/estrellas.png">
-                      <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                      <p class="precio"><span class="u-pull-right ">$15</span></p>
                       <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="15">Agregar Al Carrito</a>
                   </div>
               </div> <!--.card-->
@@ -308,7 +299,7 @@
                   <h4>100 Recetas de Comida Natural</h4>
                   <p>Juan Pedro</p>
                   <img src="./images/cursos/estrellas.png">
-                  <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                  <p class="precio"><span class="u-pull-right ">$15</span></p>
                   <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="16">Agregar Al Carrito</a>
                 </div>
               </div> <!--.card-->
@@ -319,7 +310,6 @@
 </main>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="api_key.js"></script>
-  <script src="app.js"></script>
+  <script src="./script/app.js"></script>
 </body>
 </html>

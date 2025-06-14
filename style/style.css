@@ -79,7 +79,7 @@ body{
 
 .opciones li{
   margin: 0.3rem;
-   padding: 0.3rem;
+  padding: 0.3rem;
 }
 
 /*iconos ---------------*/
@@ -92,9 +92,23 @@ body{
   display: flex;
 }
 
+#imgCarrito{
+  width: 4rem;
+  height: 4rem;
+} 
+
+table p{
+  margin-top: 0.1rem;
+}
+
+table img{
+  border-radius: 1rem;
+}
+
 .iconos_udemy img{
   height: 1rem;
   width: 1rem;
+ 
 }
 
 .iconos_udemy li{
@@ -241,12 +255,12 @@ button{
 }
 
 .four.columns {
-     width: calc(25% - 20px)
+  width: calc(25% - 20px)
 }
 
 .card {
-    background: #fff;
-    padding: 15px;
+  background: #fff;
+  padding: 15px;
 }
 
 .imagen-curso {
@@ -256,20 +270,20 @@ button{
 
 
 .precio {
-    font-size: 18px;
-    color: #333;
-    font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
 }
 
 .u-pull-right {
-    color: red;
-    font-size: 16px;
-    font-weight: bold;
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .contenedor-carrito {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .carrito{
@@ -285,13 +299,26 @@ button{
 }
 
 .contenedor-carrito:hover .carrito {
-    display: block; /* Muestra el carrito al hacer hover sobre el icono */
+  display: block; 
 }
 
-th, td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #E1E1E1;
+tr div{
+ margin-left: 0.5rem;
+ margin-bottom: 0.5rem;
+}
+td{
+  
+  margin-bottom: 0.5rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.titulo, .precio{
+    font-weight: bold;
 }
 
 .u-full-width {
@@ -300,21 +327,22 @@ th, td {
 }
 
 .button{
-    display: inline-block;
-    height: 38px;
-    padding: 0 30px;
-    color: #555;
-    text-align: center;
-    font-size: 11px;
-    font-weight: 600;
-    line-height: 38px;
-    letter-spacing: .1rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    white-space: nowrap;
-    background-color: transparent;
-    border-radius: 4px;
-    border: 1px solid #bbb;
-    cursor: pointer;
-    box-sizing: border-box;
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
 }
+
