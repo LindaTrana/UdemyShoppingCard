@@ -346,3 +346,78 @@ td{
   box-sizing: border-box;
 }
 
+
+/* PARA LA CESTA */
+
+.contenedorCompra{
+  display: flex;
+  width: 90%;
+  margin: 1.6rem auto;
+}
+.contenedorCursos{
+  margin: 1.6rem auto;
+  width: 65%;
+}
+.contenedorDatos{
+ width: 30%;
+}
+
+.contenedorPagar{
+  border-bottom: 1px solid rgb(209, 204, 204);
+  margin-bottom: 1rem;
+  /* display: flex; */
+  /* flex-direction: column;      */
+  justify-content: center;    
+  align-items: center;          
+}
+
+.titleCesta{
+  font-size: 3rem;
+  margin:2rem 0 0.7rem 6rem;
+}
+
+.detallesCurso{
+  display: flex;
+  padding-top:1rem;
+  padding-bottom:1rem;
+  border-top: 1px solid rgb(209, 204, 204);
+}
+
+.informacion{
+  width: 50%;
+  margin-left: 0.5rem;
+}
+.opciones{
+  margin-left: 1rem;
+  color:#6d28d2;
+  text-align: end;
+}
+
+.opciones p{
+  padding: 0.2rem;
+}
+.precioCesta{
+  margin-left: 0.5rem;
+  padding: 1rem;
+  color:#6d28d2;
+  font-weight: bold;
+}
+
+#imgCesta{
+  width: 7rem;
+  height: 5rem;
+}
+
+.irPagar{
+  width: 15rem;
+  height: 2rem;
+  color: white;
+  background-color: #6d28d2;
+  border: none;
+}
+.btnPagar{
+  width: 15rem;
+  height: 2rem;
+  color: 6d28d2;
+  border: 1px solid #6d28d2;
+}
