@@ -28,24 +28,121 @@ const vaciar_carrito = document.querySelector('#vaciar-carrito')
 let carrito_compra = []
 
 // CREACION DE FUNCIONES
-enviarCurso()
+enviarCurso();
+conectarCursos()
+
+function conectarCursos(){
+  let url = 'script/db.json';
+
+  fetch(url)
+  .then(data => data.json())
+  .then(resultado => crearCurso(resultado));
+}
+
+function crearCurso(informacion){
+  let contador = 0;
+
+  let container = document.querySelector('.container')
+
+  let contenedorSecundario = document.createElement('section');
+  contenedorSecundario.classList.add('contenedorSecundario');
+
+  let h1 = document.createElement('h1');
+  h1.classList.add('encabezado')
+  h1.setAttribute('id','encabezado');
+
+  let row = document.createElement('div');
+  row.classList.add('row');
+
+  informacion.forEach((curso) =>{
+
+
+    let fcolums = document.createElement('div');
+    fcolums.classList.add('four','columns');
+
+    let card = document.createElement('div');
+    card.classList.add('card');
+    
+    let imgCurso = document.createElement('img');
+    imgCurso.classList.add('imagen-curso', 'u-full-width');
+    imgCurso.src = curso.imageUrl
+
+    let infCard = document.createElement('div');
+    infCard.classList.add('info-card');
+
+    let titulo = document.createElement('h4');
+    titulo.textContent = curso.title
+
+    let autor = document.createElement('p');
+    autor.textContent = curso.author
+
+    let imgEstrella = document.createElement('img');
+    imgEstrella.src = curso.starsUrl
+
+    let precio = document.createElement('p');
+    precio.classList.add('precio')
+
+    let span = document.createElement('span');
+    span.classList.add('u-pull-right');
+    span.textContent = `${curso.price}`
+
+    let button = document.createElement('a');
+    button.href = '#';
+    button.classList.add('u-full-width', 'button-primary' ,'button', 'input', 'agregar-carrito');
+    button.setAttribute('data-id',contador++);
+    button.textContent = 'Agregar al carrito';
+
+    infCard.appendChild(titulo);
+    infCard.appendChild(autor);
+    infCard.appendChild(imgEstrella);
+    precio.appendChild(span)
+    infCard.appendChild(precio);
+    infCard.appendChild(button);
+
+    card.appendChild(imgCurso);
+    card.appendChild(infCard);
+
+    fcolums.appendChild(card);
+
+    row.appendChild(fcolums);
+    //contenedorSecundario.appendChild(h1)
+    contenedorSecundario.appendChild(row);
+    container.appendChild(contenedorSecundario);
+
+  })
+}
 
 function enviarCurso(){
   lista_curso.addEventListener('click', (e) => {
     e.preventDefault();
     if(e.target.classList.contains('agregar-carrito')){
         const curso = e.target.parentElement.parentElement;
-        crearCurso(curso)
+        crearCarrito(curso);
     }
   })
 
   document.addEventListener('DOMContentLoaded', () =>{
     carrito_compra = JSON.parse(localStorage.getItem("carrito")) || [];
+    notificaciones();
     verCurso();
   })
 }
 
-function crearCurso(curso){
+function notificaciones(){
+    carrito_compra = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    let notificacion = document.querySelector('.notificacion');
+    
+    if(carrito_compra.length > 0){
+      let cantNotificacion =  document.querySelector('.cantNotificacion');
+      cantNotificacion.textContent = carrito_compra.length;
+      notificacion.style.display = 'block';
+    } else {
+      notificacion.style.display = 'none';
+    }
+}
+
+function crearCarrito(curso){
   let datos = {
     imagen: curso.querySelector('img').src,
     titulo: curso.querySelector('h4').textContent,
@@ -67,9 +164,7 @@ function crearCurso(curso){
   }
 
   verCurso()
-
-  encontrarRepetido = carrito_compra.some(car => car.id === datos.id)
-
+  notificaciones();
 }
 
 function verCurso(){
